@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  min-width: 100vw;
+  min-height: 100vh;
+  margin: 0 auto;
+  justify-content: center;
+  background: url('./assets/poke_bg.jpg');
+}
+
+.title {
+  position: absolute;
+  top: 10rem;
+  left: 50%;
+  transform: translate(-50%);
+  width: 15rem;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  height: 100vh;
+  align-items: center;
+  justify-items: center;
+}
+
+.comparisonWp {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 2rem;
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #a3a3a3;
+  width: 8rem;
+  height: 3rem;
+  border-radius: 0.5rem;
+}

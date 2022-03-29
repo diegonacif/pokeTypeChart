@@ -4,15 +4,30 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
   <title>Poke Type Chart</title>
 </head>
 <body>
-  <h1>Poke Type Chart</h1>
-  <label for="attacker">Attacker</label>
-  <select name="attacker" id="attacker" onchange="crossType()"></select>
-  <label for="defender">Defender</label>
-  <select name="defender" id="defender" onchange="crossType()"></select>
-  <div id="result">-</div>
+  <main>
+    <div class="title">
+      <h1>Poke Type Chart</h1>
+    </div>
+    <div class="container">
+      <div class="comparisonWp">
+        <div>
+          <label for="attacker">Attacker</label>
+          <select name="attacker" id="attacker" onchange="crossType()"></select>
+        </div>
+        <div>
+          <label for="defender">Defender</label>
+          <select name="defender" id="defender" onchange="crossType()"></select>
+        </div>
+      </div>
+      <div class="result">
+        <div id="result">RESULT</div>
+      </div>
+    </div>
+  </main>
 </body>
 <script src="script.js"></script>
 </html>
