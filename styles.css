@@ -34,6 +34,13 @@ main {
     font-family: 'Gloria Hallelujah', cursive;
     background: green;
   }
+
+  img {
+    position: absolute;
+    bottom: 1rem;
+    right: 0;
+    width: 12rem;
+  }
 }
 @media only screen and (min-width: 401px) {
   .title {
@@ -48,6 +55,13 @@ main {
     font-family: 'Gloria Hallelujah', cursive;
     background: green;
     border-radius: 0.2rem;
+  }
+
+  img {
+    position: absolute;
+    bottom: -0.5rem;
+    right: 0;
+    width: calc(12rem + 5%);
   }
 }
 
@@ -93,6 +107,7 @@ main {
   height: 3rem;
   border-radius: 0.5rem;
   color: white;
+  z-index: 1;
 }
 
 select {
@@ -104,3 +119,4 @@ select {
 label {
   font-weight: 600;
 }
+
