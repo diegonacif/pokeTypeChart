@@ -6,6 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
   <title>Poke Type Chart</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Inter:wght@300;400;600&display=swap"
+    rel="stylesheet"
+  >
 </head>
 <body>
   <main>
@@ -15,16 +21,16 @@
     <div class="container">
       <div class="comparisonWp">
         <div>
-          <label for="attacker">Attacker</label>
+          <label for="attacker">Atacante</label>
           <select name="attacker" id="attacker" onchange="crossType()"></select>
         </div>
         <div>
-          <label for="defender">Defender</label>
+          <label for="defender">Defensor</label>
           <select name="defender" id="defender" onchange="crossType()"></select>
         </div>
       </div>
       <div class="result">
-        <div id="result">RESULT</div>
+        <div id="result"></div>
       </div>
     </div>
   </main>

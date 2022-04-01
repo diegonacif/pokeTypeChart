@@ -100,6 +100,8 @@ function crossType () {
   const eDefender = document.getElementById('defender')
   const defender = eDefender.value;
 
+
+
   // NORMAL ATTACKER
   if (attacker === "normal" && 
   (defender === "normal" || defender === "fire" || defender === "water" ||
@@ -114,3 +116,5 @@ function crossType () {
     return result.innerHTML = "Não causa dano"
   }
 };
+
+window.onload = crossType();
