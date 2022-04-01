@@ -47,6 +47,7 @@ main {
     color: white;
     font-family: 'Gloria Hallelujah', cursive;
     background: green;
+    border-radius: 0.2rem;
   }
 }
 
