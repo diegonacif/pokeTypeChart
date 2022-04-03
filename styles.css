@@ -15,10 +15,12 @@ main {
   flex-direction: column;
   min-width: 100vw;
   min-height: 100vh;
-  margin: 0 auto;
+  /* margin: 0 auto; */
   justify-content: center;
-  /* background: url('./assets/poke_bg.jpg'); */
-  background: #202124;
+  background: url('./assets/black_bg_04.jpg');
+  background-position: center center;
+  background-size: cover;
+  /* background: #202124; */
 }
 
 
@@ -35,7 +37,9 @@ main {
     background: green;
   }
 
+  
   img {
+    transition: all 0.75s ease-in-out;
     position: absolute;
     bottom: 1rem;
     right: 0;
@@ -43,12 +47,16 @@ main {
   }
 }
 @media only screen and (min-width: 401px) {
+  h1 {
+    font-size: 270%;
+  }
+
   .title {
     display: flex;
     justify-content: center;
     align-items: center;
     align-self: center;
-    height: 4rem;    
+    height: 4.75rem;    
     min-width: 25rem;
     width: 50%;
     color: white;
@@ -58,8 +66,9 @@ main {
   }
 
   img {
+    transition: all 0.75s ease-in-out;
     position: absolute;
-    bottom: -0.5rem;
+    bottom: 0;
     right: 0;
     width: calc(12rem + 5%);
   }
@@ -70,6 +79,7 @@ main {
   display: grid;
   grid-template-columns: repeat(2, 50%);
   height: calc(100vh - 4rem);
+  width: 100%;
   align-items: center;
   justify-items: center;
   font-family: 'Inter', cursive;
@@ -120,3 +130,7 @@ label {
   font-weight: 600;
 }
 
+/* img:hover {
+  transition: all 1s ease-in-out;
+  width: calc(12rem + 10%);
+} */

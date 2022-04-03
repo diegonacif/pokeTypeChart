@@ -1,6 +1,6 @@
-let optionListAttacker = document.getElementById('attacker').options;
-let optionListDefender = document.getElementById('defender').options;
-let result = document.getElementById('result');
+const optionListAttacker = document.getElementById('attacker').options;
+const optionListDefender = document.getElementById('defender').options;
+const result = document.getElementById('result');
 
 // TYPE OBJECT LIST
 let options = [
@@ -8,38 +8,6 @@ let options = [
     text: 'Normal',
     value: 'normal',
     selected: true
-  },
-  {
-    text: 'Fighting',
-    value: 'fighting'
-  },
-  {
-    text: 'Flying',
-    value: 'flying'
-  },
-  {
-    text: 'Poison',
-    value: 'poison'
-  },
-  {
-    text: 'Ground',
-    value: 'ground'
-  },
-  {
-    text: 'Rock',
-    value: 'rock'
-  },
-  {
-    text: 'Bug',
-    value: 'bug'
-  },
-  {
-    text: 'Ghost',
-    value: 'ghost'
-  },
-  {
-    text: 'Steel',
-    value: 'steel'
   },
   {
     text: 'Fire',
@@ -58,12 +26,40 @@ let options = [
     value: 'electric'
   },
   {
+    text: 'Ice',
+    value: 'ice'
+  },
+  {
+    text: 'Fighting',
+    value: 'fighting'
+  },
+  {
+    text: 'Poison',
+    value: 'poison'
+  },
+  {
+    text: 'Ground',
+    value: 'ground'
+  },
+  {
+    text: 'Flying',
+    value: 'flying'
+  },
+  {
     text: 'Psychic',
     value: 'psychic'
   },
   {
-    text: 'Ice',
-    value: 'ice'
+    text: 'Bug',
+    value: 'bug'
+  },
+  {
+    text: 'Rock',
+    value: 'rock'
+  },
+  {
+    text: 'Ghost',
+    value: 'ghost'
   },
   {
     text: 'Dragon',
@@ -72,6 +68,10 @@ let options = [
   {
     text: 'Dark',
     value: 'dark'
+  },
+  {
+    text: 'Steel',
+    value: 'steel'
   },
   {
     text: 'Fairy',
@@ -101,20 +101,73 @@ function crossType () {
   const defender = eDefender.value;
 
 
-
   // NORMAL ATTACKER
-  if (attacker === "normal" && 
-  (defender === "normal" || defender === "fire" || defender === "water" ||
-  defender === "grass" || defender === "electric" || defender === "ice" ||
-  defender === "fighting" || defender === "poison" || defender === "ground" ||
-  defender === "flying" || defender === "psychic" || defender === "bug" ||
-  defender === "dragon" || defender === "dark" || defender === "fairy")) {
+  if (attacker === "normal" && (defender === "normal" || defender === "fire" ||
+  defender === "water" || defender === "grass" || defender === "electric" || 
+  defender === "ice" || defender === "fighting" || defender === "poison" || 
+  defender === "ground" || defender === "flying" || defender === "psychic" || 
+  defender === "bug" || defender === "dragon" || defender === "dark" || 
+  defender === "fairy")) {
     return result.innerHTML = "Dano normal"
-  } else if (attacker === "normal" && (defender === "rock" || defender === "steel")) {
-    return result.innerHTML = "Metade do dano"
-  } else {
+  } else if (attacker === "normal" && (defender === "rock" || 
+  defender === "steel")) {
+    return result.innerHTML = "Pouco efetivo"
+  } else if (attacker === "normal" && defender === "ghost") {
     return result.innerHTML = "Não causa dano"
   }
+
+  // FIRE ATTACKER
+
+    else if (attacker === "fire" && (defender === "normal" || 
+  defender === "electric" || defender === "fighting" || 
+  defender === "poison" || defender === "ground" || defender === "flying" || 
+  defender === "psychic" || defender === "ghost" || defender === "dark" || 
+  defender === "fairy")) {
+    return result.innerHTML = "Dano normal"
+  } else if (attacker === "fire" && (defender === "grass" || 
+  defender === "ice" || defender === "bug" || defender === "steel")) {
+    return result.innerHTML = "Super efetivo"
+  } else if (attacker === "fire" && (defender === "fire" || 
+  defender === "water" || defender === "rock" || defender === "dragon")) {
+    return result.innerHTML = "Pouco efetivo"
+  }
+  
+  // WATER ATTACKERS
+    else if (attacker === "water" && (defender === "normal" || 
+  defender === "electric" || defender === "ice" || defender === "fighting" || 
+  defender === "poison" || defender === "flying" || defender === "psychic" || 
+  defender === "bug" || defender === "ghost" || defender === "dark" || 
+  defender === "steel" || defender === "fairy")) {
+    return result.innerHTML = "Dano normal"
+  } else if (attacker === "water" && (defender === "fire" || 
+  defender === "ground" || defender === "rock")) {
+    return result.innerHTML = "Super efetivo"
+  } else if (attacker === "water" && (defender === "water" || 
+  defender === "grass" || defender === "dragon")) {
+    return result.innerHTML = "Pouco efetivo"
+  }
+
+  // FIGHTING ATTACKER
+    else if (attacker === "fighting" && (defender === "fire" || 
+  defender === "water" || defender === "grass" || defender === "electric" || 
+  defender === "fighting" || defender === "ground" || defender === "dragon")) {
+    return result.innerHTML = "Dano normal"
+  } else if (attacker === "fighting" && (defender === "normal" || 
+  defender === "ice" || defender === "rock" || defender === "dark" || 
+  defender === "steel")) {
+    return result.innerHTML = "Super efetivo"
+  } else if (attacker === "fighting" && (defender === "poison" || 
+  defender === "flying" || defender === "psychic" ||  defender === "bug" || 
+  defender === "fairy")) {
+    return result.innerHTML = "Pouco efetivo"
+  } else if (attacker === "fighting" && defender === "ghost") {
+    return result.innerHTML = "Não causa dano"
+  }
+  else {
+    return result.innerHTML = "nada ainda"
+  };  
+
 };
+
 
 window.onload = crossType();
