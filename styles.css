@@ -15,12 +15,10 @@ main {
   flex-direction: column;
   min-width: 100vw;
   min-height: 100vh;
-  /* margin: 0 auto; */
   justify-content: center;
-  background: url('./assets/black_bg_04.jpg');
+  background: url('./assets/forest_bg.jpeg');
   background-position: center center;
   background-size: cover;
-  /* background: #202124; */
 }
 
 
@@ -32,9 +30,9 @@ main {
     align-self: center;
     height: 4rem;    
     width: 100%;
-    color: white;
+    color: #FFCB05;
     font-family: 'Gloria Hallelujah', cursive;
-    background: green;
+    background: #45639D;
   }
 
   
@@ -59,9 +57,9 @@ main {
     height: 4.75rem;    
     min-width: 25rem;
     width: 50%;
-    color: white;
+    color: #FFCB05;
     font-family: 'Gloria Hallelujah', cursive;
-    background: green;
+    background: #45639D;
     border-radius: 0.2rem;
   }
 
@@ -73,7 +71,6 @@ main {
     width: calc(12rem + 5%);
   }
 }
-
 
 .container {
   display: grid;
@@ -94,6 +91,7 @@ main {
   color: white;
   background: #2d2f33;
   width: 80%;
+  max-width: 16rem;
   height: 13rem;
   border-radius: 0.5rem;
 }
@@ -107,18 +105,72 @@ main {
   width: 100%;
 }
 
-.result {
+/* RESULT CLASSES  */
+.result-normal {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background: #2d2f33;
-  width: 9rem;
-  height: 3rem;
+  width: 5rem;
+  height: 5rem;
   border-radius: 0.5rem;
   color: white;
   z-index: 1;
+  font-weight: 600;
+  font-size: 2rem;
+  border: 3px solid #2d2f33;
 }
+
+.result-se {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #0d6606;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 0.5rem;
+  color: white;
+  z-index: 1;
+  font-weight: 600;
+  font-size: 2rem;
+  border: 3px solid #2d2f33;
+}
+
+.result-pe {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #8c1212;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 0.5rem;
+  color: white;
+  z-index: 1;
+  font-weight: 600;
+  font-size: 2.5rem;
+  border: 3px solid #2d2f33;
+}
+
+.result-null {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #090909;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 0.5rem;
+  color: white;
+  z-index: 1;
+  font-weight: 600;
+  font-size: 2rem;
+  border: 3px solid #2d2f33;
+}
+
+
 
 select {
   width: 7rem;

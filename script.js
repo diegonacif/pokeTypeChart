@@ -93,6 +93,22 @@ options.forEach(option =>
   )
 );
 
+// RESULT STYLE FUNCTION
+function resultStyle () {
+  const resultWp = document.getElementById('resultWp');
+  const resultValue = document.getElementById('result').innerHTML;
+
+  if (resultValue === "x1") {
+    return resultWp.className = "result-normal";
+  } else if (resultValue === "x2") {
+    return resultWp.className = "result-se";
+  } else if (resultValue === "½") {
+    return resultWp.className = "result-pe";
+  } else {
+    return resultWp.className = "result-null";
+  } 
+};
+
 // COMPARISON FUNCTION
 function crossType () {
   const eAttacker = document.getElementById('attacker')
@@ -108,66 +124,289 @@ function crossType () {
   defender === "ground" || defender === "flying" || defender === "psychic" || 
   defender === "bug" || defender === "dragon" || defender === "dark" || 
   defender === "fairy")) {
-    return result.innerHTML = "Dano normal"
+    return result.innerHTML = "x1"
   } else if (attacker === "normal" && (defender === "rock" || 
   defender === "steel")) {
-    return result.innerHTML = "Pouco efetivo"
+    return result.innerHTML = "½"
   } else if (attacker === "normal" && defender === "ghost") {
-    return result.innerHTML = "Não causa dano"
+    return result.innerHTML = "0"
   }
 
   // FIRE ATTACKER
-
     else if (attacker === "fire" && (defender === "normal" || 
   defender === "electric" || defender === "fighting" || 
   defender === "poison" || defender === "ground" || defender === "flying" || 
   defender === "psychic" || defender === "ghost" || defender === "dark" || 
   defender === "fairy")) {
-    return result.innerHTML = "Dano normal"
+    return result.innerHTML = "x1"
   } else if (attacker === "fire" && (defender === "grass" || 
   defender === "ice" || defender === "bug" || defender === "steel")) {
-    return result.innerHTML = "Super efetivo"
+    return result.innerHTML = "x2"
   } else if (attacker === "fire" && (defender === "fire" || 
   defender === "water" || defender === "rock" || defender === "dragon")) {
-    return result.innerHTML = "Pouco efetivo"
+    return result.innerHTML = "½"
   }
   
-  // WATER ATTACKERS
+  // WATER ATTACKER
     else if (attacker === "water" && (defender === "normal" || 
   defender === "electric" || defender === "ice" || defender === "fighting" || 
   defender === "poison" || defender === "flying" || defender === "psychic" || 
   defender === "bug" || defender === "ghost" || defender === "dark" || 
   defender === "steel" || defender === "fairy")) {
-    return result.innerHTML = "Dano normal"
+    return result.innerHTML = "x1"
   } else if (attacker === "water" && (defender === "fire" || 
   defender === "ground" || defender === "rock")) {
-    return result.innerHTML = "Super efetivo"
+    return result.innerHTML = "x2"
   } else if (attacker === "water" && (defender === "water" || 
   defender === "grass" || defender === "dragon")) {
-    return result.innerHTML = "Pouco efetivo"
+    return result.innerHTML = "½"
+  }
+
+  // GRASS ATTACKER
+    else if (attacker === "grass" && (defender === "normal" || 
+  defender === "electric" || defender === "ice" || defender === "fighting" || 
+  defender === "psychic" || defender === "ghost" || defender === "dark" || 
+  defender === "fairy")) {
+    return result.innerHTML = "x1"
+  } else if (attacker === "grass" && (defender === "water" || 
+  defender === "ground" || defender === "rock")) {
+    return result.innerHTML = "x2"
+  } else if (attacker === "grass" && (defender === "fire" || 
+  defender === "grass" || defender === "poison" || defender === "flying" || 
+  defender === "bug" || defender === "dragon" || defender === "steel")) {
+    return result.innerHTML = "½"
+  }
+
+  // ELECTRIC ATTACKER
+    else if (attacker === "electric" && (defender === "normal" || 
+  defender === "fire" || defender === "ice" || defender === "fighting" || 
+  defender === "poison" || defender === "psychic" || defender === "bug" || 
+  defender === "rock" || defender === "ghost" || defender === "dark" || 
+  defender === "steel" || defender === "fairy")) {
+    return result.innerHTML = "x1"
+  } else if (attacker === "electric" && (defender === "water" || 
+  defender === "flying")) {
+    return result.innerHTML = "x2"
+  } else if (attacker === "electric" && (defender === "grass" || 
+  defender === "electric" || defender === "dragon")) {
+    return result.innerHTML = "½"
+  } else if (attacker === "electric" && defender === "ground") {
+    return result.innerHTML = "0"
+  }
+
+  // ICE ATTACKERS
+    else if (attacker === "ice" && (defender === "normal" || 
+  defender === "electric" || defender === "fighting" || defender === "poison" || 
+  defender === "psychic" || defender === "bug" || defender === "rock" || 
+  defender === "ghost" || defender === "dark" || defender === "fairy")) {
+    return result.innerHTML = "x1"
+  } else if (attacker === "ice" && (defender === "grass" || 
+  defender === "ground" || defender === "flying" || defender === "dragon")) {
+    return result.innerHTML = "x2"
+  } else if (attacker === "ice" && (defender === "fire" || 
+  defender === "water" || defender === "ice" ||  defender === "steel")) {
+    return result.innerHTML = "½"
   }
 
   // FIGHTING ATTACKER
     else if (attacker === "fighting" && (defender === "fire" || 
   defender === "water" || defender === "grass" || defender === "electric" || 
   defender === "fighting" || defender === "ground" || defender === "dragon")) {
-    return result.innerHTML = "Dano normal"
+    return result.innerHTML = "x1"
   } else if (attacker === "fighting" && (defender === "normal" || 
   defender === "ice" || defender === "rock" || defender === "dark" || 
   defender === "steel")) {
-    return result.innerHTML = "Super efetivo"
+    return result.innerHTML = "x2"
   } else if (attacker === "fighting" && (defender === "poison" || 
   defender === "flying" || defender === "psychic" ||  defender === "bug" || 
   defender === "fairy")) {
-    return result.innerHTML = "Pouco efetivo"
+    return result.innerHTML = "½"
   } else if (attacker === "fighting" && defender === "ghost") {
-    return result.innerHTML = "Não causa dano"
+    return result.innerHTML = "0"
   }
+
+  // POISON ATTACKERS
+    else if (attacker === "poison" && (defender === "normal" ||
+  defender === "fire" || defender === "water" || defender === "eletric" ||
+  defender === "ice" || defender === "fighting" || defender === "flying" ||
+  defender === "bug" || defender === "dragon" || defender === "dark")) {
+    return result.innerHTML = "x1"
+  } else if (attacker === "poison" && (defender === "grass" ||
+  defender === "fairy")) {
+    return result.innerHTML = "x2"
+  } else if (attacker === "poison" && (defender === "poison" ||
+  defender === "ground" || defender === "rock" ||defender === "ghost")) {
+    return result.innerHTML = "½"
+  }
+
+  // GROUND ATTACKERS
+    else if (attacker === "ground" && (defender === "normal" ||
+  defender === "water" || defender === "ice" || defender === "fighting" ||
+  defender === "ground" || defender === "psychic" ||defender === "ghost" ||
+  defender === "dragon" ||defender === "dark" || defender === "fairy")) {
+    return result.innerHTML = "x1"
+  } else if (attacker === "ground" && (defender === "fire" ||
+  defender === "eletric" ||defender === "poison" ||defender === "rock" ||
+  defender === "steel")) {
+    return result.innerHTML = "x2"
+  } else if (attacker === "ground" && (defender === "grass" ||
+  defender === "bug")) {
+    return result.innerHTML = "½"
+  }
+
+  // FLYING ATTACKERS
+    else if (attacker === "flying" && (defender === "normal" ||
+  defender === "fire" || defender === "water" || defender === "ice" ||
+  defender === "poison" || defender === "ground" || defender === "flying" ||
+  defender === "psychic" || defender === "ghost" || defender === "dragon" ||
+  defender === "dark" || defender === "fairy")) {
+    return result.innerHTML = "x1"
+  } else if (attacker === "flying" && (defender === "grass" ||
+  defender === "fighting" || defender === "bug")) {
+    return result.innerHTML = "x2"
+  } else if (attacker === "flying" && (defender === "eletric" ||
+  defender === "rock" || defender === "steel")) {
+    return result.innerHTML = "½"
+  }
+
+  // PSYCHIC ATTACKER
+    else if (attacker === "psychic" && (defender === "normal" || 
+  defender === "fire" || defender === "water" || defender === "grass" || 
+  defender === "electric" || defender === "ice" || defender === "ground" || 
+  defender === "flying" || defender === "bug" || defender === "rock" || 
+  defender === "ghost" || defender === "dragon" || defender === "fairy")) {
+    return result.innerHTML = "x1"
+  } else if (attacker === "psychic" && (defender === "fighting" || 
+  defender === "poison")) {
+    return result.innerHTML = "x2"
+  } else if (attacker === "psychic" && (defender === "psychic" || 
+  defender === "steel")) {
+    return result.innerHTML = "½"
+  } else if (attacker === "psychic" && defender === "dark") {
+    return result.innerHTML = "0"
+  }
+
+  // BUG ATTACKER
+    else if (attacker === "bug" && (defender === "normal" || 
+  defender === "water" || defender === "electric" || defender === "ice" || 
+  defender === "ground" || defender === "bug" || defender === "rock" || 
+  defender === "dragon")) {
+    return result.innerHTML = "x1"
+  } else if (attacker === "bug" && (defender === "grass" || 
+  defender === "psychic" || defender === "dark")) {
+    return result.innerHTML = "x2"
+  } else if (attacker === "bug" && (defender === "fire" || 
+  defender === "fighting" || defender === "poison" || defender === "flying" || 
+  defender === "ghost" || defender === "steel" || defender === "fairy")) {
+    return result.innerHTML = "½"
+  }
+
+  // ROCK ATTACKER
+    else if (attacker === "rock" && (defender === "normal" || 
+  defender === "water" || defender === "grass" || defender === "electric" || 
+  defender === "poison" || defender === "psychic" || defender === "rock" || 
+  defender === "ghost" || defender === "dragon" || defender === "dark" || 
+  defender === "fairy")) {
+    return result.innerHTML = "x1"
+  } else if (attacker === "rock" && (defender === "fire" || 
+  defender === "ice" || defender === "flying" || defender === "bug")) {
+    return result.innerHTML = "x2"
+  } else if (attacker === "rock" && (defender === "fighting" || 
+  defender === "ground" || defender === "steel")) {
+    return result.innerHTML = "½"
+  } 
+
+  // GHOST ATTACKERS
+    else if (attacker === "ghost" && (defender === "fire" || 
+  defender === "water" || defender === "grass" || defender === "electric" || 
+  defender === "ice" || defender === "fighting" || defender === "poison" || 
+  defender === "ground" || defender === "flying" || defender === "bug" || 
+  defender === "rock" || defender === "dragon" || defender === "steel" || 
+  defender === "fairy")) {
+    return result.innerHTML = "x1"
+  } else if (attacker === "ghost" && (defender === "psychic" || 
+  defender === "ghost")) {
+    return result.innerHTML = "x2"
+  } else if (attacker === "ghost" && defender === "dark") {
+    return result.innerHTML = "½"
+  } else if (attacker === "ghost" && defender === "normal") {
+    return result.innerHTML = "0"
+  }
+
+  // DRAGON ATTACKER
+    else if (attacker === "dragon" && (defender === "normal" || 
+  defender === "fire" || defender === "water" || defender === "grass" || 
+  defender === "electric" || defender === "ice" || defender === "fighting" || 
+  defender === "poison" || defender === "ground" || defender === "flying" || 
+  defender === "psychic" || defender === "bug" || defender === "rock" || 
+  defender === "ghost" || defender === "dark")) {
+    return result.innerHTML = "x1"
+  } else if (attacker === "dragon" && defender === "dragon") {
+    return result.innerHTML = "x2"
+  } else if (attacker === "dragon" && defender === "steel") {
+    return result.innerHTML = "½"
+  } else if (attacker === "dragon" && defender === "fairy") {
+    return result.innerHTML = "0"
+  }
+
+  // DARK ATTACKER
+    else if (attacker === "dark" && (defender === "dragon" || 
+  defender === "normal" || defender === "fire" || defender === "water" || 
+  defender === "grass" || defender === "electric" || defender === "ice" || 
+  defender === "poison" || defender === "ground" || defender === "flying" || 
+  defender === "bug" || defender === "rock" )) {
+    return result.innerHTML = "x1"
+  } else if (attacker === "dark" && (defender === "psychic" || 
+  defender === "ghost" )) {
+    return result.innerHTML = "x2"
+  } else if (attacker === "dark" && (defender === "steel" || 
+  defender === "fighting" || defender === "dark" || defender === "fairy" )) {
+    return result.innerHTML = "½"
+  }
+
+  // STEEL ATTACKERS
+    else if (attacker === "steel" && (defender === "normal" ||
+  defender === "grass" || defender === "fighting" || defender === "poison" ||
+  defender === "ground" || defender === "flying" || defender === "psychic" ||
+  defender === "bug" ||  defender === "ghost" || defender === "dragon" ||
+  defender === "dark")) {
+    return result.innerHTML = "x1"
+  } else if (attacker === "steel" && (defender === "ice" ||
+  defender === "rock" || defender === "fairy")) {
+    return result.innerHTML = "x2"
+  } else if (attacker === "steel" && (defender === "fire" ||
+  defender === "water" || defender === "eletric" || defender === "steel")) {
+    return result.innerHTML = "½"
+  }
+
+  // FAIRY ATTACKER
+    else if (attacker === "fairy" && (defender === "normal" || 
+  defender === "water" || defender === "grass" || defender === "electric" || 
+  defender === "ice" || defender === "ground" || defender === "flying" || 
+  defender === "psychic" || defender === "bug" || defender === "rock" || 
+  defender === "ghost" || defender === "fairy" )) {
+    return result.innerHTML = "x1"
+  } else if (attacker === "fairy" && (defender === "fighting" || 
+  defender === "dragon" || defender === "dark")) {
+    return result.innerHTML = "x2"
+  } else if (attacker === "fairy" && (defender === "fire" || 
+  defender === "poison" || defender === "steel")) {
+    return result.innerHTML = "½"
+  }
+
   else {
     return result.innerHTML = "nada ainda"
-  };  
+  }
 
 };
 
+// ONCHANGE FUNCTION
+function onChange () {
+  return (
+    crossType(),
+    resultStyle()
+  )
+};
 
-window.onload = crossType();
+
+window.onload = onChange();
