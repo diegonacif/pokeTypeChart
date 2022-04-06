@@ -237,6 +237,8 @@ function crossType () {
   } else if (attacker === "poison" && (defender === "poison" ||
   defender === "ground" || defender === "rock" ||defender === "ghost")) {
     return result.innerHTML = "½"
+  } else if (attacker === "poison" && defender === "steel") {
+    return result.innerHTML = "0"
   }
 
   // GROUND ATTACKERS
@@ -252,6 +254,8 @@ function crossType () {
   } else if (attacker === "ground" && (defender === "grass" ||
   defender === "bug")) {
     return result.innerHTML = "½"
+  } else if (attacker === "ground" && defender === "flying") {
+    return result.innerHTML = "0"
   }
 
   // FLYING ATTACKERS
@@ -400,13 +404,103 @@ function crossType () {
 
 };
 
+// POKEMON RENDERING
+function pokeRenderAttacker() {
+  const eAttacker = document.getElementById('attacker')
+  const attacker = eAttacker.value;  
+  const attackerImg = document.getElementById('attackerImg')  
+
+  if (attacker === 'normal') {
+    return attackerImg.src = "./assets/snorlax.png"
+  } else if (attacker === 'fire') {
+    return attackerImg.src = "./assets/charizard.png"
+  } else if (attacker === 'water') {
+    return attackerImg.src = "./assets/blastoise.png"
+  } else if (attacker === 'grass') {
+    return attackerImg.src = "./assets/venusaur.png"
+  } else if (attacker === 'electric') {
+    return attackerImg.src = "./assets/pikachu.png"
+  } else if (attacker === 'ice') {
+    return attackerImg.src = "./assets/dewgong.png"
+  } else if (attacker === 'fighting') {
+    return attackerImg.src = "./assets/machamp.png"
+  } else if (attacker === 'poison') {
+    return attackerImg.src = "./assets/weezing.png"
+  } else if (attacker === 'ground') {
+    return attackerImg.src = "./assets/dugtrio.png"
+  } else if (attacker === 'flying') {
+    return attackerImg.src = "./assets/pidgeot.png"
+  } else if (attacker === 'psychic') {
+    return attackerImg.src = "./assets/mewtwo.png"
+  } else if (attacker === 'bug') {
+    return attackerImg.src = "./assets/scyther.png"
+  } else if (attacker === 'rock') {
+    return attackerImg.src = "./assets/onix.png"
+  } else if (attacker === 'ghost') {
+    return attackerImg.src = "./assets/gengar.png"
+  } else if (attacker === 'dragon') {
+    return attackerImg.src = "./assets/dragonair.png"
+  } else if (attacker === 'dark') {
+    return attackerImg.src = "./assets/houndoom.png"
+  } else if (attacker === 'steel') {
+    return attackerImg.src = "./assets/skarmory.png"
+  } else if (attacker === 'fairy') {
+    return attackerImg.src = "./assets/clefable.png"
+  }
+}
+
+function pokeRenderDefender() {
+  const eDefender = document.getElementById('defender')
+  const defender = eDefender.value;
+  const defenderImg = document.getElementById('defenderImg')
+
+  if (defender === 'normal') {
+    return defenderImg.src = "./assets/snorlax.png"
+  } else if (defender === 'fire') {
+    return defenderImg.src = "./assets/charizard.png"
+  } else if (defender === 'water') {
+    return defenderImg.src = "./assets/blastoise.png"
+  } else if (defender === 'grass') {
+    return defenderImg.src = "./assets/venusaur.png"
+  } else if (defender === 'electric') {
+    return defenderImg.src = "./assets/pikachu.png"
+  } else if (defender === 'ice') {
+    return defenderImg.src = "./assets/dewgong.png"
+  } else if (defender === 'fighting') {
+    return defenderImg.src = "./assets/machamp.png"
+  } else if (defender === 'poison') {
+    return defenderImg.src = "./assets/weezing.png"
+  } else if (defender === 'ground') {
+    return defenderImg.src = "./assets/dugtrio.png"
+  } else if (defender === 'flying') {
+    return defenderImg.src = "./assets/pidgeot.png"
+  } else if (defender === 'psychic') {
+    return defenderImg.src = "./assets/mewtwo.png"
+  } else if (defender === 'bug') {
+    return defenderImg.src = "./assets/scyther.png"
+  } else if (defender === 'rock') {
+    return defenderImg.src = "./assets/onix.png"
+  } else if (defender === 'ghost') {
+    return defenderImg.src = "./assets/gengar.png"
+  } else if (defender === 'dragon') {
+    return defenderImg.src = "./assets/dragonair.png"
+  } else if (defender === 'dark') {
+    return defenderImg.src = "./assets/houndoom.png"
+  } else if (defender === 'steel') {
+    return defenderImg.src = "./assets/skarmory.png"
+  } else if (defender === 'fairy') {
+    return defenderImg.src = "./assets/clefable.png"
+  }
+}
+
 // ONCHANGE FUNCTION
 function onChange () {
   return (
     crossType(),
-    resultStyle()
+    resultStyle(),
+    pokeRenderAttacker(),
+    pokeRenderDefender()
   )
 };
-
 
 window.onload = onChange();
