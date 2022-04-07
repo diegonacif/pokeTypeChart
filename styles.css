@@ -227,27 +227,31 @@ label {
 
   @media only screen and (max-height: 630px) {
     main {
-      grid-template-rows: 10rem auto;
-      min-width: 100%;
-      min-height: 100%;
+      grid-template-rows: min-content auto;
+      min-width: 100vw;
+      min-height: 100vh;
     }
 
     .title {
-      height: 10rem;
-      justify-content: flex-start;
+      height: min-content;
+      /* justify-content: flex-start; */
+      grid-template-rows: 5rem 3rem;
+      align-self: flex-start;
     }
 
     .title img {
-      width: 15rem;
+      width: 14rem;
     }
 
     .title h1 {
       bottom: 0.5rem;  
-      font-size: 180%; 
+      font-size: 180%;
+      height: 3rem;
     }
   
     .container {
       height: calc(100vh - 10rem);
+      margin-top: 0.5rem;
     }
   
     .imgWp {
@@ -284,7 +288,6 @@ label {
       /* transform: scaleX(-1); */
     }
 
-
     .resultContainer {
       display: flex;
       width: 100%;
@@ -292,8 +295,6 @@ label {
       align-items: center;
       justify-content: space-around;
     }
-
-
   }
   
   #attackerImg {
