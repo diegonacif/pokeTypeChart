@@ -406,46 +406,101 @@ function crossType () {
 
 // POKEMON RENDERING
 function pokeRenderAttacker() {
-  const eAttacker = document.getElementById('attacker')
+  const eAttacker = document.getElementById('attacker');
   const attacker = eAttacker.value;  
-  const attackerImg = document.getElementById('attackerImg')  
+  const attackerImg = document.getElementById('attackerImg');
+  const chibiAttackerImg = document.getElementById('chibiAttackerImg');
 
   if (attacker === 'normal') {
-    return attackerImg.src = "./assets/snorlax.png"
+    return (
+      attackerImg.src = "./assets/snorlax.png",
+      chibiAttackerImg.src = "./assets/pokemon-chibi/snorlax2.png"
+    )
   } else if (attacker === 'fire') {
-    return attackerImg.src = "./assets/charizard.png"
+    return (
+      attackerImg.src = "./assets/charizard.png",
+      chibiAttackerImg.src = "./assets/pokemon-chibi/charizard2.png"
+    )
   } else if (attacker === 'water') {
-    return attackerImg.src = "./assets/blastoise.png"
+    return (
+      attackerImg.src = "./assets/blastoise.png",
+      chibiAttackerImg.src = "./assets/pokemon-chibi/blastoise2.png"
+    )
   } else if (attacker === 'grass') {
-    return attackerImg.src = "./assets/venusaur.png"
+    return (
+      attackerImg.src = "./assets/venusaur.png",
+      chibiAttackerImg.src = "./assets/pokemon-chibi/venusaur2.png"
+    )
   } else if (attacker === 'electric') {
-    return attackerImg.src = "./assets/pikachu.png"
+    return (
+      attackerImg.src = "./assets/pikachu.png",
+      chibiAttackerImg.src = "./assets/pokemon-chibi/pikachu2.png"
+    )
   } else if (attacker === 'ice') {
-    return attackerImg.src = "./assets/dewgong.png"
+    return (
+      attackerImg.src = "./assets/dewgong.png",
+      chibiAttackerImg.src = "./assets/pokemon-chibi/dewgong2.png"
+    )
   } else if (attacker === 'fighting') {
-    return attackerImg.src = "./assets/machamp.png"
+    return (
+      attackerImg.src = "./assets/machamp.png",
+      chibiAttackerImg.src = "./assets/pokemon-chibi/machamp2.png"
+    )
   } else if (attacker === 'poison') {
-    return attackerImg.src = "./assets/weezing.png"
+    return (
+      attackerImg.src = "./assets/weezing.png",
+      chibiAttackerImg.src = "./assets/pokemon-chibi/weezing2.png"
+    )
   } else if (attacker === 'ground') {
-    return attackerImg.src = "./assets/dugtrio.png"
+    return (
+      attackerImg.src = "./assets/dugtrio.png",
+      chibiAttackerImg.src = "./assets/pokemon-chibi/dugtrio2.png"
+    )
   } else if (attacker === 'flying') {
-    return attackerImg.src = "./assets/pidgeot.png"
+    return (
+      attackerImg.src = "./assets/pidgeot.png",
+      chibiAttackerImg.src = "./assets/pokemon-chibi/pidgeot2.png"
+    )
   } else if (attacker === 'psychic') {
-    return attackerImg.src = "./assets/mewtwo.png"
+    return (
+      attackerImg.src = "./assets/mewtwo.png",
+      chibiAttackerImg.src = "./assets/pokemon-chibi/mewtwo2.png"
+    )
   } else if (attacker === 'bug') {
-    return attackerImg.src = "./assets/scyther.png"
+    return (
+      attackerImg.src = "./assets/scyther.png",
+      chibiAttackerImg.src = "./assets/pokemon-chibi/scyther2.png"
+    )
   } else if (attacker === 'rock') {
-    return attackerImg.src = "./assets/onix.png"
+    return (
+      attackerImg.src = "./assets/onix.png",
+      chibiAttackerImg.src = "./assets/pokemon-chibi/onix2.png"
+    )
   } else if (attacker === 'ghost') {
-    return attackerImg.src = "./assets/gengar.png"
+    return (
+      attackerImg.src = "./assets/gengar.png",
+      chibiAttackerImg.src = "./assets/pokemon-chibi/gengar2.png"
+    )
   } else if (attacker === 'dragon') {
-    return attackerImg.src = "./assets/dragonair.png"
+    return (
+      attackerImg.src = "./assets/dragonair.png",
+      chibiAttackerImg.src = "./assets/pokemon-chibi/dragonair2.png"
+    )
   } else if (attacker === 'dark') {
-    return attackerImg.src = "./assets/houndoom.png"
+    return (
+      attackerImg.src = "./assets/houndoom.png",
+      chibiAttackerImg.src = "./assets/pokemon-chibi/houndoom2.png"
+    )
   } else if (attacker === 'steel') {
-    return attackerImg.src = "./assets/skarmory.png"
+    return (
+      attackerImg.src = "./assets/skarmory.png",
+      chibiAttackerImg.src = "./assets/pokemon-chibi/skarmory2.png"
+    )
   } else if (attacker === 'fairy') {
-    return attackerImg.src = "./assets/clefable.png"
+    return (
+      attackerImg.src = "./assets/clefable.png",
+      chibiAttackerImg.src = "./assets/pokemon-chibi/clefable2.png"
+    )
   }
 }
 
@@ -453,44 +508,99 @@ function pokeRenderDefender() {
   const eDefender = document.getElementById('defender')
   const defender = eDefender.value;
   const defenderImg = document.getElementById('defenderImg')
+  const chibiDefenderImg = document.getElementById('chibiDefenderImg');
 
   if (defender === 'normal') {
-    return defenderImg.src = "./assets/snorlax.png"
+    return (
+      defenderImg.src = "./assets/snorlax.png",
+      chibiDefenderImg.src = "./assets/pokemon-chibi/snorlax2.png"
+    )
   } else if (defender === 'fire') {
-    return defenderImg.src = "./assets/charizard.png"
+    return (
+      defenderImg.src = "./assets/charizard.png",
+      chibiDefenderImg.src = "./assets/pokemon-chibi/charizard2.png"
+    )
   } else if (defender === 'water') {
-    return defenderImg.src = "./assets/blastoise.png"
+    return (
+      defenderImg.src = "./assets/blastoise.png",
+      chibiDefenderImg.src = "./assets/pokemon-chibi/blastoise2.png"
+    )
   } else if (defender === 'grass') {
-    return defenderImg.src = "./assets/venusaur.png"
+    return (
+      defenderImg.src = "./assets/venusaur.png",
+      chibiDefenderImg.src = "./assets/pokemon-chibi/venusaur2.png"
+    )
   } else if (defender === 'electric') {
-    return defenderImg.src = "./assets/pikachu.png"
+    return (
+      defenderImg.src = "./assets/pikachu.png",
+      chibiDefenderImg.src = "./assets/pokemon-chibi/pikachu2.png"
+    )
   } else if (defender === 'ice') {
-    return defenderImg.src = "./assets/dewgong.png"
+    return (
+      defenderImg.src = "./assets/dewgong.png",
+      chibiDefenderImg.src = "./assets/pokemon-chibi/dewgong2.png"
+    )
   } else if (defender === 'fighting') {
-    return defenderImg.src = "./assets/machamp.png"
+    return (
+      defenderImg.src = "./assets/machamp.png",
+      chibiDefenderImg.src = "./assets/pokemon-chibi/machamp2.png"
+    )
   } else if (defender === 'poison') {
-    return defenderImg.src = "./assets/weezing.png"
+    return (
+      defenderImg.src = "./assets/weezing.png",
+      chibiDefenderImg.src = "./assets/pokemon-chibi/weezing2.png"
+    )
   } else if (defender === 'ground') {
-    return defenderImg.src = "./assets/dugtrio.png"
+    return (
+      defenderImg.src = "./assets/dugtrio.png",
+      chibiDefenderImg.src = "./assets/pokemon-chibi/dugtrio2.png"
+    )
   } else if (defender === 'flying') {
-    return defenderImg.src = "./assets/pidgeot.png"
+    return (
+      defenderImg.src = "./assets/pidgeot.png",
+      chibiDefenderImg.src = "./assets/pokemon-chibi/pidgeot2.png"
+    )
   } else if (defender === 'psychic') {
-    return defenderImg.src = "./assets/mewtwo.png"
+    return (
+      defenderImg.src = "./assets/mewtwo.png",
+      chibiDefenderImg.src = "./assets/pokemon-chibi/mewtwo2.png"
+    )
   } else if (defender === 'bug') {
-    return defenderImg.src = "./assets/scyther.png"
+    return (
+      defenderImg.src = "./assets/scyther.png",
+      chibiDefenderImg.src = "./assets/pokemon-chibi/scyther2.png"
+    )
   } else if (defender === 'rock') {
-    return defenderImg.src = "./assets/onix.png"
+    return (
+      defenderImg.src = "./assets/onix.png",
+      chibiDefenderImg.src = "./assets/pokemon-chibi/onix2.png"
+    )
   } else if (defender === 'ghost') {
-    return defenderImg.src = "./assets/gengar.png"
+    return (
+      defenderImg.src = "./assets/gengar.png",
+      chibiDefenderImg.src = "./assets/pokemon-chibi/gengar2.png"
+    )
   } else if (defender === 'dragon') {
-    return defenderImg.src = "./assets/dragonair.png"
+    return (
+      defenderImg.src = "./assets/dragonair.png",
+      chibiDefenderImg.src = "./assets/pokemon-chibi/dragonair2.png"
+    )
   } else if (defender === 'dark') {
-    return defenderImg.src = "./assets/houndoom.png"
+    return (
+      defenderImg.src = "./assets/houndoom.png",
+      chibiDefenderImg.src = "./assets/pokemon-chibi/houndoom2.png"
+    )
   } else if (defender === 'steel') {
-    return defenderImg.src = "./assets/skarmory.png"
+    return (
+      defenderImg.src = "./assets/skarmory.png",
+      chibiDefenderImg.src = "./assets/pokemon-chibi/skarmory2.png"
+    )
   } else if (defender === 'fairy') {
-    return defenderImg.src = "./assets/clefable.png"
-  }
+    return (
+      defenderImg.src = "./assets/clefable.png",
+      chibiDefenderImg.src = "./assets/pokemon-chibi/clefable2.png"
+    )
+  };
 }
 
 // ONCHANGE FUNCTION
