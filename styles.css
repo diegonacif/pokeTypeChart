@@ -42,6 +42,17 @@ main {
   width: 100%;
 }
 
+.imgBg {
+  background: rgba(192, 176, 136, 0.9);
+  border-radius: 50%;
+  transition: background-color 0.5s;
+}
+
+.imgBg:hover {
+  background-color: var(--bg-circle-active);
+  transition: background-color 0.5s;
+}
+
 .title h1 {
   -webkit-text-stroke: 1.2px #45639D;
   /* position: relative; */
@@ -185,20 +196,15 @@ label {
   
   #attackerImg {
     transition: height 0.5s ease;
-    position: absolute;
-    bottom: 1rem;
-    left: 0;
     height: 10rem;
     transform: scaleX(-1);
   }
 
   #defenderImg {
     transition: height 0.5s ease;
-    position: absolute;
-    bottom: 1rem;
-    right: 0;
     height: 10rem;
   }
+  
 }
 @media only screen and (min-width: 401px) {
   .container {
