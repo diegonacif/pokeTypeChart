@@ -227,7 +227,7 @@ function crossType () {
 
   // POISON ATTACKERS
     else if (attacker === "poison" && (defender === "normal" ||
-  defender === "fire" || defender === "water" || defender === "eletric" ||
+  defender === "fire" || defender === "water" || defender === "electric" ||
   defender === "ice" || defender === "fighting" || defender === "flying" ||
   defender === "bug" || defender === "dragon" || defender === "dark")) {
     return result.innerHTML = "x1"
@@ -248,7 +248,7 @@ function crossType () {
   defender === "dragon" ||defender === "dark" || defender === "fairy")) {
     return result.innerHTML = "x1"
   } else if (attacker === "ground" && (defender === "fire" ||
-  defender === "eletric" ||defender === "poison" ||defender === "rock" ||
+  defender === "electric" ||defender === "poison" ||defender === "rock" ||
   defender === "steel")) {
     return result.innerHTML = "x2"
   } else if (attacker === "ground" && (defender === "grass" ||
@@ -268,7 +268,7 @@ function crossType () {
   } else if (attacker === "flying" && (defender === "grass" ||
   defender === "fighting" || defender === "bug")) {
     return result.innerHTML = "x2"
-  } else if (attacker === "flying" && (defender === "eletric" ||
+  } else if (attacker === "flying" && (defender === "electric" ||
   defender === "rock" || defender === "steel")) {
     return result.innerHTML = "½"
   }
@@ -379,7 +379,7 @@ function crossType () {
   defender === "rock" || defender === "fairy")) {
     return result.innerHTML = "x2"
   } else if (attacker === "steel" && (defender === "fire" ||
-  defender === "water" || defender === "eletric" || defender === "steel")) {
+  defender === "water" || defender === "electric" || defender === "steel")) {
     return result.innerHTML = "½"
   }
 
